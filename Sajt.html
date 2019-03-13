@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="Slike/slogo.jpg"/>
+    <title>S Store</title>
+    <link rel="stylesheet" type="text/css" href="Sajt.css">
+</head>
+<body>
+    <header>
+        <img class="icon" src="Slike/slogo.jpg" alt="S">
+        <div class="drop">
+            <div class="dropbtn">STORE</div>
+            <div class="dropcon">
+                <a id="top">NOTEBOOKS</a>
+                <a id="phone">SMARTPHONES</a>
+                <a id="watch">SMARTWATCHES</a>
+            </div>
+        </div>
+        <div class="dropinfo"><a id="infor">INFOMATION</a></div>
+        <img src="Slike/cart4.png" alt="CART" id="cart">
+    </header>
+    <section class="grid1">
+        <div class="img1"></div>
+        <div class="img2"></div>
+        <div class="img3"></div>
+        <p class="s1t2">
+            "Imagination is more important than knowledge."
+        </p>
+        <h1>Lifestyle choices</h1>
+        <p class="s1t">
+            Over the years, technology has revolutionized our world. 
+            Technology has created amazing tools and resources, putting useful information at their fingertips.
+        </p>
+        <p class="s1t1">
+                Modern technology has made it possible for the discovery of many functional and utility devices like the smartwatch and the smartphone. 
+                With all of these revolutions, technology has also made our lives easier, faster, better… and more fun.
+        </p>
+    </section>
+    <section id="laptop">
+        <h1 class="lp1">NOTEBOOKS</h1>
+        <div class="lpimg1"></div>
+        <!-- <div class="lpimg2"></div> -->
+        <div class="lpt1">
+                Whether you want to surf the net from your sofa, catch up while you commute, or are a gamer on the go there’s a laptop for you. <br>
+                Our wide range of computers is carefully chosen to suit all needs, so your ideal laptop is ready and waiting for you. We’ve prepared a guide to key laptop features to help you decide. <br>
+                Look out for “Our experts love” laptops. These recommendations highlight the very best laptops in our range. Each showcases a key feature such as touchscreen excellence, portability, and sound quality.
+        </div>
+    </section>
+    <section id="smartphone">
+        <h1 class="sp1">SMARTPHONES</h1>
+        <div class="spimg1"></div>
+        <div class="spimg2"></div>
+        <div class="spt1">
+            The most important impact on society and the world is the smartphone. <br>
+            Smartphone have actually been one of the primary drivers in productivity improvements. <br>
+            It's easy to find a great phone today and to be honest today's phones are so good you really don't need to be replacing them on an annual basis.
+        </div>
+    </section>
+    <section id="smartwatch">
+        <h1 class="sw1">SMARTWATCHES</h1>
+        <div class="swimg1"></div>
+        <div class="swimg2"></div>
+        <div class="swt1">
+                A smartwatch is the ultimate phone accessory. <br>
+                It can tell the time, of course, but it can also beam important notifications straight to your wrist, track your fitness stats and pay for your morning coffee.<br>
+                Today's best smartwatch models can perform a ton of tricks, such as enabling you to search the internet with your voice, track your location with GPS or even monitor your heart rate to protect your overall health.                
+        </div>
+    </section>
+    <section id="info">
+        <h1 id="c" >CONTACT INFOMATION</h1>
+		<div class="central">
+			<table>
+				<tr>
+					<th>Store Name</th>
+					<td>S Store</td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td>steva97osecanski@gmail.com</td>
+						
+				</tr>
+				<tr>
+					<th>Mobile Phone</th>
+					<td>+381629615025</td>
+				</tr>
+			</table>
+		</div>
+    </section>
+    <button id="topbut"><img src="Slike/arrow.png" alt=""></button>
+</body>
+<script src="data.js"></script>
+<script>
+var SStore={
+    added: [],
+    proizvodi: function(ty, cl, loc){
+        var pel=[];
+        var kupljeni=[];
+        for(var i=0; i<data.products.length; i++){
+            if(data.products[i].type == ty){
+                pel[i]=document.createElement("div");
+                pel[i].classList.add(cl);
+
+                var namep=document.createElement("p");
+                namep.innerHTML= data.products[i].name;
+                pel[i].appendChild(namep);
+
+                var pic=document.createElement("img");
+                pic.src= data.products[i].image;
+                pel[i].appendChild(pic);
+
+                var pri=document.createElement("p");
+                pri.innerHTML=data.products[i].price + "$";
+                pel[i].appendChild(pri);
+
+                var add=document.createElement("img");
+                add.src= ("Slike/addcart2.png");
+                // that = this;
+                add.setAttribute("data-barkod", data.products[i].number);
+                add.addEventListener("click", function () {
+                    var br = this.getAttribute("data-barkod");
+                    SStore.added.push(br);
+                    alert("Product added");
+                    for (var i = 0; i < SStore.added.length - 1; i++) {
+                        if (SStore.added[i] == br) {
+                            SStore.added.pop();
+                            alert("Product already exists");
+                        }
+                    }
+                    console.log(SStore.added);
+                    localStorage.setItem("cart", JSON.stringify(SStore.added)); //local storage unos
+                })
+
+                pel[i].appendChild(add);
+
+                document.querySelector(loc).appendChild(pel[i]);
+            }
+        }
+        
+    },
+    pozovi_korpu:function(){
+        window.open("Korpa.html", "_blank"); //otvara sajt u novom tabu
+    },
+    c: 0,
+    scrlaptop: function(){
+        var dz=setInterval(function(){
+            window.scrollBy(0,30);
+            c++;
+            if(window.pageYOffset>1410) //pozicija ekrana
+                clearInterval(dz);
+        },10);
+    },
+    scrphone: function(){
+        var dz=setInterval(function(){
+            window.scrollBy(0,30);
+            c++;
+            if(window.pageYOffset>2475) //pozicija ekrana
+                clearInterval(dz);
+        },10);
+    },
+    scrwatch: function(){
+        var dz=setInterval(function(){
+            window.scrollBy(0,30);
+            c++;
+            if(window.pageYOffset>3560) //pozicija ekrana
+                clearInterval(dz);
+        },10);
+    },
+    scrinfo: function(){
+        var dz=setInterval(function(){
+            window.scrollBy(0,30);
+            c++;
+            if(window.pageYOffset>4640) //pozicija ekrana
+                clearInterval(dz);
+        },10);
+    },
+    showtop: function(){
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+            document.getElementById("topbut").style.display = "block";
+        else
+            document.getElementById("topbut").style.display = "none";
+    },
+    backtop: function(){
+        document.documentElement.scrollTop = 0;
+    }
+}
+
+SStore.proizvodi("laptop", "laptops", "#laptop");
+SStore.proizvodi("smartphone", "smartphones", "#smartphone");
+SStore.proizvodi("smartwatch", "smartwatches", "#smartwatch");
+
+document.querySelector("#cart").addEventListener("click", function(){
+    SStore.pozovi_korpu();
+});
+document.querySelector("#top").addEventListener("click", function(){
+    SStore.scrlaptop();
+});
+document.querySelector("#phone").addEventListener("click", function(){
+    SStore.scrphone();
+});
+document.querySelector("#watch").addEventListener("click", function(){
+    SStore.scrwatch();
+});
+document.querySelector("#infor").addEventListener("click", function(){
+    SStore.scrinfo();
+});
+window.onscroll = function(){SStore.showtop()};
+document.querySelector("#topbut").addEventListener("click", function(){
+    SStore.backtop();
+});
+getlocal();
+// localStorage.clear();
+</script>
+
+</html>

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+html, body{
+    width:100%; height:100%;
+    margin:0; padding:0;
+}
+body *{
+    margin:0; padding:0;
+    box-sizing:border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+a{ text-decoration:none; }
+ol, ul {list-style-type: none;}
+
+header{
+    display: grid;
+    grid-template-columns: 0.3fr 0.5fr 1fr 1fr 1fr;
+    width: 100%;
+    font-size: 25px;
+    height: 12.5vh;
+    line-height: 12.5vh;
+    background-color: rgb(247, 242, 255);
+    text-align: center;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.icon{
+    grid-column: 1 / 2;
+    width: auto;
+    height: 12.5vh;
+}
+#cart{
+    width: auto;
+    height: 9.7vh;
+    grid-column: 5 / 6;
+    justify-self: end;
+    padding-right: 3.3vw;
+    padding-top: 2.1vh;
+    padding-bottom: 0.4vh;
+}
+header .tekst{
+    grid-column: 2 / 3;
+    color: black;
+    font-weight: bold;
+}
+/* header div:hover{
+    text-shadow: 1px 1px 1px;
+} */
+#vcarts{
+    font-size: 19px;
+    padding-top: 2vh;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 18vh 18vh 18vh 18vh 18vh 18vh 18vh 18vh;
+    background-image: url("Slike/background5.jpg");
+    background-size: cover;
+}
+#vcarts .items{
+    padding-left: 2vw;
+    background-color: white;
+    align-self: center;
+    grid-column: 2 / 3;
+    position: relative;
+    line-height: 18vh;
+    border: 2px inset rgb(224, 189, 151, 0.8);
+}
+/* .items:hover{
+    border: 2.3px solid black;
+} */
+.items .slika{
+    width: auto;
+    height: 16vh;
+    position: absolute;
+    top: 0vh; left: 22vw;
+    padding-top: 1vh;
+}
+.items .price{
+    position: absolute;
+    top: 0vh; right: 25vw;
+}
+.items .rem{
+    height: 5vh;
+    width: auto;
+    position: absolute;
+    top: 6.5vh; right: 2vw;
+}
+.left{
+    grid-column: 1 / 2;
+    grid-row: 1 / 11;
+}
+.right{
+    grid-column: 3 / 4;
+    grid-row: 3 / 11;
+}
+.total{
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    font-size: 25.5px;
+    text-align: center;
+    margin-left: 1.5vw;
+    margin-top: 2.5vh;
+}
+.btn{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    height: 10vh;
+    width: 12vw;
+    justify-self: center;
+    background-color: rgb(143, 117, 94, 0.7);
+    border: 0.5px solid rgb(143, 117, 94, 0);
+    color: black;
+    font-size: 23px;
+    border-radius: 22%;
+    margin-left: 1.5vw;
+    margin-top: 2.5vh;
+    transition: all 0.15s ease-out;
+}
+.btn:hover{
+    background-color: rgb(143, 117, 94, 0.9);
+}
+#empty{
+    display: none;
+    font-size: 33px;
+    color: rgb(143, 117, 94);
+    text-align: center;
+    align-self: center;
+}

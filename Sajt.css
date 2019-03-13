@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+html, body{
+    width:100%; height:100%;
+    margin:0; padding:0;
+}
+body *{
+    margin:0; padding:0;
+    box-sizing:border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+a{ text-decoration:none; }
+ol, ul {list-style-type: none;}
+
+header{
+    display: grid;
+    grid-template-columns: 0.3fr 0.5fr 1fr 1fr 1fr;
+    width: 100%;
+    font-size: 23px;
+    height: 12.5vh;
+    line-height: 12.5vh;
+    background-color: rgb(247, 242, 255);
+    text-align: center;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.icon{
+    grid-column: 1 / 2;
+    width: auto;
+    height: 12.5vh;
+}
+#cart{
+    width: auto;
+    height: 9.7vh;
+    grid-column: 5 / 6;
+    justify-self: end;
+    padding-right: 3.3vw;
+    padding-top: 2.1vh;
+    padding-bottom: 0.4vh;
+    transition: width 1s, height 1s, padding-top 1s;
+    transition-timing-function: ease-out;
+}
+#cart:hover{
+    width: auto;
+    height: 12.5vh;
+    padding-top: 0.9vh;
+    padding-bottom: 0.4vh;
+    cursor: pointer;
+}
+.grid1 {
+    display: grid;
+    grid-template-columns: 3fr 6fr 1fr 5fr;
+    grid-template-rows: 20vh 24vh 17vh 33vh 2vh 21vh 16vh 26vh 12vh;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+    background-image: url("Slike/background5.jpg");
+    background-size: cover;
+}
+.img1{
+    background: url(Slike/image1.jpg);
+    background-size: cover;
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+    margin-top: 1vh;
+}
+.img2{
+    background: url(Slike/image2.jpg);
+    background-size: cover;
+    grid-column: 4 / 5;
+    grid-row: 3 / 5;
+}
+.img3{
+    background: url(Slike/image3.jpg);
+    background-size: cover;
+    grid-column: 1 / 3;
+    grid-row: 6 / 9;
+}
+.img4{
+    background: url(Slike/image4.jpg);
+    background-size: cover;
+    grid-column: 4 / 5;
+    grid-row: 8 / 10;
+}
+.s1t{
+    grid-column: 4 / 5;
+    grid-row: 2 / 3; 
+    margin-top: 1vh;
+    margin-right: 1vw;
+    font-size: 20px;
+    line-height: 1.3em;
+}
+.grid1 h1{
+    font-size: 33px;
+    grid-column: 3 / 5;
+    grid-row: 1 / 2; 
+    align-self: center;
+    justify-self: center;
+    border-top: 4px solid black;
+    padding-top: 2vh;
+}
+.s1t1{
+    grid-column: 4 / 5;
+    grid-row: 7 / 9;
+    font-size: 20px;
+    align-self: center;
+    justify-self: center;
+    line-height: 1.7em;
+}
+.s1t2{
+    grid-column: 1 / 3;
+    grid-row: 4 / 6;
+    font-style: italic;
+    font-size: 35px;
+    align-self: center;
+    justify-self: center;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+.dropinfo{
+    grid-column: 3 / 4;
+    justify-self: start;
+    align-self: center;
+    
+}
+.dropinfo a{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+.dropbtn{
+    height: 10vh;
+    width: 7vw;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+}
+.drop{
+    grid-column: 2 / 3;
+    justify-self: end;
+    margin-right: 3vw;
+    align-items: center;
+}
+.dropcon{
+    position: absolute;
+    display: none;
+    background-color: rgb(247, 242, 255);
+    min-width: 170px;
+    z-index: 1;
+    transition: all 0.5s ease-out;
+}
+.dropcon a {
+    height: 5.3vh;
+    line-height: 5.3vh;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    display: block;
+    transition: all 0.25s ease-out;
+}
+.dropcon a:hover{
+    background-color: rgb(224, 189, 151, 0.8);
+    cursor: pointer;
+}
+.drop:hover .dropcon{
+    display: block;
+}
+#laptop{
+    display: grid;
+    grid-template-columns: 2.7fr 2.7fr 2.7fr 2.7fr 2.7fr;
+    grid-template-rows: 20vh 24vh 27vh 33vh 40vh;
+    margin-top: 2vh;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+    background-image: url("Slike/background5.jpg");
+    background-size: cover;
+}
+.lp1{
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    font-size: 56px;
+    justify-self: right;
+    align-self: center;
+    padding-right: 10vw;
+}
+.lpimg1{
+    background: url(Slike/imagelaptop1.jpg);
+    background-size: cover;
+    grid-column: 1 / 4;
+    grid-row: 2 / 5;
+    margin-bottom: 3vh;
+}
+.lpt1{
+    grid-column: 4 / 6;
+    grid-row: 2 / 5;
+    font-size: 21.5px;
+    text-align: justify;
+    line-height: 1.7em;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-top: 3vh;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    margin-bottom: 3vh;
+}
+.laptops{
+    position: relative;
+    font-size: 21px;
+    padding-top: 1.5vh;
+    text-align: center;
+    background-color: white;
+    transition: all 0.1s ease-out;
+}
+.laptops img{
+    width: auto;
+    height: 28vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+.laptops p:nth-child(3){
+    width: 12vw;
+    text-align: center;
+}
+.laptops img:nth-child(4){
+    width: 5vw;
+    height: auto;
+    position: absolute;
+    padding-right: 2vw;
+    right: 0;
+    bottom: 0;
+}
+.laptops:hover{
+    border: 2px outset rgb(224, 189, 151, 0.8);
+    border-radius: 3px;
+}
+#smartphone{
+    display: grid;
+    grid-template-columns: 2.7fr 2.7fr 2.7fr 2.7fr 2.7fr;
+    grid-template-rows: 20vh 24vh 27vh 33vh 40vh;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+    background-image: url("Slike/background5.jpg");
+    background-size: cover;
+}
+.sp1{
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    font-size: 56px;
+    justify-self: right;
+    align-self: center;
+    padding-right: 10vw;
+}
+.spimg1{
+    background: url(Slike/imagesmartphone1.jpg);
+    background-size: cover;
+    grid-column: 1 / 3;
+    grid-row: 2 / 5;
+    margin-right: 3vw;
+    margin-bottom: 3vh;
+}
+.spimg2{
+    background: url(Slike/imagesmartphone2.jpg);
+    background-size: cover;
+    grid-column: 4 / 6;
+    grid-row: 2 / 5;
+    margin-left: 3vw;
+    margin-bottom: 3vh;
+}
+.spt1{
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+    font-size: 20px;
+    padding-top: 5vh;
+    text-align: justify;
+    line-height: 1.7em;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    margin-bottom: 3vh;
+}
+.smartphones{
+    position: relative;
+    font-size: 21px;
+    padding-top: 1.5vh;
+    text-align: center;
+    background-color: white;
+    transition: all 0.1s ease-out;
+}
+.smartphones img{
+    width: auto;
+    height: 28vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+.smartphones p:nth-child(3){
+    width: 12vw;
+    text-align: center;
+}
+.smartphones img:nth-child(4){
+    width: 5vw;
+    height: auto;
+    position: absolute;
+    padding-right: 2vw;
+    right: 0;
+    bottom: 0;
+}
+.smartphones:hover{
+    border: 2px outset rgb(224, 189, 151, 0.8);
+    border-radius: 3px;
+}
+#smartwatch{
+    display: grid;
+    grid-template-columns: 2.7fr 2.7fr 2.7fr 2.7fr 2.7fr;
+    grid-template-rows: 20vh 24vh 27vh 33vh 40vh;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+    background-image: url("Slike/background5.jpg");
+    background-size: cover;
+}
+.sw1{
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    font-size: 56px;
+    justify-self: right;
+    align-self: center;
+    padding-right: 10vw;
+}
+.swimg1{
+    background: url(Slike/imagesmartwatch1.1.jpg);
+    background-size: cover;
+    grid-column: 1 / 3;
+    grid-row: 2 / 5;
+    margin-right: 3vw;
+    margin-bottom: 3vh;
+}
+.swimg2{
+    background: url(Slike/imagesmartwatch2.1.jpg);
+    background-size: cover;
+    grid-column: 4 / 6;
+    grid-row: 2 / 5;
+    margin-left: 3vw;
+    margin-bottom: 3vh;
+}
+.swt1{
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+    font-size: 18.5px;
+    padding-top: 5vh;
+    text-align: justify;
+    line-height: 1.7em;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    margin-bottom: 3vh;
+}
+.smartwatches{
+    position: relative;
+    font-size: 21px;
+    padding-top: 1.5vh;
+    text-align: center;
+    background-color: white;
+    transition: all 0.1s ease-out;
+}
+.smartwatches img{
+    width: auto;
+    height: 28vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+.smartwatches p:nth-child(3){
+    width: 12vw;
+    text-align: center;
+}
+.smartwatches img:nth-child(4){
+    width: 5vw;
+    height: auto;
+    position: absolute;
+    padding-right: 2vw;
+    right: 0;
+    bottom: 0;
+}
+.smartwatches:hover{
+    border: 2px outset rgb(224, 189, 151, 0.8);
+    border-radius: 3px;
+}
+#info{
+    display: grid;
+    grid-template-columns: 2.7fr 2.7fr 2.7fr;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
+    background: url(Slike/infoimage4.jpg);
+    background-size: cover;
+    color: rgb(224, 189, 151, 0.8);
+}
+#info h1{
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    align-self: center;
+    font-size: 56px;
+    justify-self: right;
+    margin-right: 8vw;
+    padding: 0 2vw;
+    border: 5px solid rgb(224, 189, 151, 0.8);
+    border-radius: 15px;
+}
+#info .central{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    font-size: 30px;
+}
+.central table{
+    border-spacing: 40px;
+}
+#topbut{
+    display: none;
+    position: fixed; 
+    bottom: 20px;
+    right: 30px; 
+    z-index: 99;
+    border: none;
+    outline: none; 
+    background-color: rgb(143, 117, 94, 0.8);
+    color: black;
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 20%;
+    transition: all 0.3s ease-out;
+}
+#topbut img{
+    height:50px;
+    width: auto;
+}
+#topbut:hover{
+    background-color: rgb(143, 117, 94);
+}
+#infor{
+    transition: all 0.1s ease-out;
+    padding-bottom: 1vh;
+}
+#infor:hover{
+    border-bottom: 3px solid black;
+}
