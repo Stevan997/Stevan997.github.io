@@ -45,7 +45,7 @@ var vcart={
                             delete pel[ind1];
                         }
                         location.reload();
-                        alert("Izbacili ste iz korpe")
+                        alert("Item is removed");
                     });
                     pel[i].appendChild(del);
 
@@ -77,5 +77,6 @@ var vcart={
 vcart.korpa_new();
 document.querySelector(".btn").addEventListener("click", function(){
     vcart.checkout();
+    alert("Your order is complete");
 });
 vcart.total();
